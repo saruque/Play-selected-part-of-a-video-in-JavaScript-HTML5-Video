@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Title Goes Here</title>
+  <style type="text/css">
+    .center { 
+      margin-left: auto;
+      margin-right: auto; 
+      display: block;
+       }
+  </style>
+</head>
+<body>
+  <video id="myvideo" width="500px"; class="center" src="my_vid.MKV"></video>
+
+  <button onclick="settime()">Click To Action!</button>
+  <script type="text/javascript">
+    
+    function settime(){
+      var video= document.getElementById("myvideo");
+      video.currentTime=40;
+      video.play();
+      console.log(video.currentTime);
+      setInterval(function(){
+        
+        if(video.currentTime>45){
+          
+          video.pause();
+        }
+      },1000);
+    }
+
+  </script>
+</body>
+</html>
